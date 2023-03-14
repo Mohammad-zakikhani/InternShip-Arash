@@ -6,6 +6,7 @@ public class Orientation : MonoBehaviour
     public float sensitivity = 5f;
 
     public GameObject playerObj;
+    public GameObject gun;
     private Transform playerTransform;
 
     private void Start()
@@ -21,5 +22,8 @@ public class Orientation : MonoBehaviour
 
         playerTransform = playerObj.GetComponent<Transform>();
         playerTransform.localRotation = Quaternion.Euler(0, rotation.x, 0);
+
+        playerTransform = gun.GetComponent<Transform>();
+        playerTransform.localRotation = Quaternion.Euler(-rotation.y, 0, 0);
     }
 }
