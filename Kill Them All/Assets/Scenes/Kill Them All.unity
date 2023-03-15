@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194227}
+  isAimingAir: 0
 --- !u!1 &193406507
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +721,8 @@ MonoBehaviour:
   playerObj: {fileID: 2118061749}
   gun: {fileID: 193406507}
   crosshairTarget: {fileID: 38725772}
-  cam: {fileID: 0}
+  cam: {fileID: 963194227}
+  CrosshairTarget: {fileID: 38725773}
 --- !u!1 &1805728998
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +769,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastOrigin: {fileID: 1805728999}
   raycastDestination: {fileID: 38725772}
-  isAimingAir: 1
 --- !u!1 &1896767688
 GameObject:
   m_ObjectHideFlags: 0
