@@ -7,6 +7,9 @@ public class Aim : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 30000f;
+
     private void Update()
     {
         ray.origin = raycastOrigin.position;
@@ -14,9 +17,14 @@ public class Aim : MonoBehaviour
 
         Physics.Raycast(ray, out hit);
 
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //Debug.DrawLine(ray.origin, hit.point, Color.red, 1.0f);
+        //}
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.DrawLine(ray.origin, hit.point, Color.red, 1.0f);
+            var bullet = Instantiate(bulletPrefab, raycastOrigin.position, raycastOrigin.rotation);
+            bullet.GetComponent<Rigidbody>().velocity = raycastOrigin.forward * bulletSpeed * Time.deltaTime;
         }
     }
 }
