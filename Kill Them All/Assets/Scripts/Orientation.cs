@@ -9,6 +9,12 @@ public class Orientation : MonoBehaviour
     public GameObject gun;
     private Transform playerTransform;
 
+    public Transform crosshairTarget;
+    public Camera cam;
+    Ray ray;
+    RaycastHit hit;
+    public CrosshairTarget CrosshairTarget;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; // locks the cursor
@@ -24,6 +30,14 @@ public class Orientation : MonoBehaviour
         playerTransform.localRotation = Quaternion.Euler(0, rotation.x, 0);
 
         playerTransform = gun.GetComponent<Transform>();
-        playerTransform.localRotation = Quaternion.Euler(-rotation.y, 0, 0);
+
+        if(CrosshairTarget.isAimingAir == true)
+        {
+            playerTransform.localRotation = Quaternion.Euler(-rotation.y, 0, 0);
+        }
+        else
+        {
+            playerTransform.LookAt(crosshairTarget);
+        }
     }
 }
