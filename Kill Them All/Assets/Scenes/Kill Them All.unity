@@ -1355,7 +1355,7 @@ MonoBehaviour:
   raycastOrigin: {fileID: 1805728999}
   raycastDestination: {fileID: 38725772}
   bulletPrefab: {fileID: 46067999645205091, guid: 535b8e5430dc59043a5a1f3d5112909f, type: 3}
-  bulletSpeed: 30000
+  bulletSpeed: 10000
 --- !u!1 &1896767688
 GameObject:
   m_ObjectHideFlags: 0

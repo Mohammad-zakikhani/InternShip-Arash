@@ -23,7 +23,8 @@ public class Enemy : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Bullet" && enemyHealth <= 0)
         {
-            Destroy(gameObject);
+            animator.enabled = true;
+            Destroy(gameObject, 0.5f);
             Debug.Log(enemyHealth + "Died");
         }
     }
