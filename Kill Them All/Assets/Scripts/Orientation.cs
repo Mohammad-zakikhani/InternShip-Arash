@@ -11,8 +11,6 @@ public class Orientation : MonoBehaviour
 
     public Transform crosshairTarget;
     public Camera cam;
-    Ray ray;
-    RaycastHit hit;
     public CrosshairTarget CrosshairTarget;
 
     private void Start()

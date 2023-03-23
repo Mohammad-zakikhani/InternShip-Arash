@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int enemyHealth = 6;
+    public int enemyHealth = 3;
     public Bullet Bullet;
 
     Animator animator;
@@ -16,16 +16,16 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet" && enemyHealth > 0)
+        if (collision.gameObject.tag == "Bullet" && enemyHealth > 1)
         {
             enemyHealth -= Bullet.Damage;
             Debug.Log(enemyHealth);
         }
-        else if (collision.gameObject.tag == "Bullet" && enemyHealth <= 0)
+        else if (collision.gameObject.tag == "Bullet" && enemyHealth <= 1)
         {
             animator.enabled = true;
             Destroy(gameObject, 0.5f);
-            Debug.Log(enemyHealth + "Died");
+            Debug.Log("Died");
         }
     }
 }

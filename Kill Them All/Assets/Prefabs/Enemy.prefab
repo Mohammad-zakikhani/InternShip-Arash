@@ -116,7 +116,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &9116707040696153903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de21ce02a2c4bec49a0383237619a6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 4
+  enemyHealth: 3
   Bullet: {fileID: 7996058801084871822, guid: 535b8e5430dc59043a5a1f3d5112909f, type: 3}
 --- !u!95 &929788453506561199
 Animator:
